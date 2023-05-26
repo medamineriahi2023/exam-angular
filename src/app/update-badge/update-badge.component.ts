@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {BadgesService} from "../../services/badges.service";
+import {Badge} from "../../models/Badge";
 
 @Component({
   selector: 'app-update-badge',
@@ -9,19 +11,21 @@ import {ActivatedRoute} from "@angular/router";
 export class UpdateBadgeComponent implements OnInit{
     id : any;
 
-  constructor(private activatedRoute:ActivatedRoute) {
+  constructor(private activatedRoute:ActivatedRoute,
+              private badgeService: BadgesService,
+              private route: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
 
   }
 
 
 
-  onSubmit(value: any) {
-
+  onSubmit(value: Badge) {
+    value.id = this.id;
+    this.badgeService.updateBadge(this.id , value).subscribe(b => this.route.navigate(['/' , '/']) );
   }
 
   ngOnInit(): void {
-    console.log(this.id);
 
   }
 }

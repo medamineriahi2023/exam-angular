@@ -10,7 +10,7 @@
       <td>Email</td>
       <td><input type="text" name="email" ngModel pattern="[a-z0-9._%+-]+@esprit.tn" required>
 
-        <div *ngIf="ngForm.controls['email'].touched && ngForm.controls['email'].invalid">
+        <div *ngIf="ngForm.controls['email']?.touched && ngForm.controls['email']?.invalid">
           <p style="font-size: 12px; color: red" *ngIf="ngForm.controls['email'].errors['pattern']">l'email doit se terminer avec @esprit.tn</p>
           <p style="font-size: 12px; color: red" *ngIf="ngForm.controls['email'].errors['required']">le champ email est obligatoire</p>
         </div>
@@ -22,7 +22,7 @@
     <tr>
       <td>Direction</td>
       <td><input type="text" name="direction" ngModel pattern="Informatique">
-        <div *ngIf="ngForm.controls['direction'].touched && ngForm.controls['direction'].invalid">
+        <div *ngIf="ngForm.controls['direction']?.touched && ngForm.controls['direction']?.invalid">
           <p style="font-size: 12px; color: red" *ngIf="ngForm.controls['direction'].errors['pattern']">le champ direction est invalide</p>
         </div>
       </td>

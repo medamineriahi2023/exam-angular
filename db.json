@@ -1,0 +1,22 @@
+{
+  "badges": [
+    {
+      "email": "test@esprit.tn",
+      "direction": "Informatique",
+      "tel": "23522522",
+      "id": 1
+    },
+    {
+      "email": "amine@esprit.tn",
+      "direction": "Informatique",
+      "tel": "23252223",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "email": "amine@gmail.com",
+      "direction": "bla bla bla ",
+      "tel": "25522202"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BadgesComponent } from './badges/badges.component';
 import { UpdateBadgeComponent } from './update-badge/update-badge.component';
+import { BadgeInfoComponent } from './badge-info/badge-info.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UpdateBadgeComponent } from './update-badge/update-badge.component';
     DashboardAdminComponent,
     NotFoundComponent,
     BadgesComponent,
-    UpdateBadgeComponent
+    UpdateBadgeComponent,
+    BadgeInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 export class Badge{
   id:number;
   email: string;
-  direcion: string;
+  direction: string;
   tel:string;
 }

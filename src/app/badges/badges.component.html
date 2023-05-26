@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let badge of badges">
+    {{badge.id}} <button *ngIf="badge.email != null" (click)="onclick(badge.id)">Details</button>
+                <a *ngIf="badge.email === null" [routerLink]="'/badge/'+badge.id">Affecter</a>
+
+    <app-badge-info *ngIf="show && badge.id === id" [info]="badge" (emitter)="cache()" ></app-badge-info>
+  </li>
+
+</ul>
